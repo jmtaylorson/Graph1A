@@ -1,42 +1,80 @@
-var APP_ID = 'D8A9CC24-CE48-279A-FFA9-85B03E507000';
+ var APP_ID = 'D8A9CC24-CE48-279A-FFA9-85B03E507000';
 var API_KEY = 'AE635105-3DFF-11C9-FF02-394AD2FE8000';
 Backendless.serverURL = 'https://api.backendless.com';
 Backendless.initApp(APP_ID, API_KEY);
-/* <3 
-http://html5.litten.com/graphing-data-in-the-html5-canvas-element-part-iv-simple-pie-charts/
-*/
 
-var adidas = "1";
-var nike = "1";
-var vans = "1";
+var adidas1 = 1;
+
+var nike1 = 1;
+
+var vans1 = 1;
+
+var data1 = adidas1;
+
+var data2 = nike1;
+
+var data3 = vans1;
+
+Backendless.Data.describe( "data" )
+ .then( function( adidas, nike, vans) {
+    adidas1 = adidas + 1;
+    nike1 = nike + 1;
+    vans1 = vans + 1;
+    
+  })
+ .catch( function( error ) {
+  });
+
 function shoes() { 
 var currentSelection = document.querySelector("input[name='selector']:checked").value;
   if (currentSelection=="Vans"){
-   vans = vans + 1
-   myData = [vans, nike, adidas]
-   myNumber = [vans,nike,adidas]
-   plotData()
-   Backendless.Data.of( "data" ).save( { adidas:adidas, nike:nike, vans:vans} )
+
+      vans1 = vans1 + 1
+   data1 = adidas1;
+data2 = nike1;
+data3 = vans1;
+      myData = [vans1, nike1, adidas1]
+
+      myNumber = [vans1,nike1,adidas1]
+
+      plotData()
+
+      Backendless.Data.of( "data" ).save( { adidas:data1, nike:data2, vans:data3} )
  .then( function( savedObject ) {
   })
  .catch( function( error ) {
   });
+      
   }else if(currentSelection=="Nike") {
-  nike = nike+1
-   myData = [vans, nike, adidas]
-   myNumber = [vans,nike,adidas]
-   plotData()
-    Backendless.Data.of( "data" ).save( { adidas:adidas, nike:nike, vans:vans} )
+  
+  nike1 = nike1 + 1
+  data1 = adidas1;
+data2 = nike1;
+data3 = vans1;
+      myData = [vans1, nike1, adidas1]
+
+      myNumber = [vans1,nike1,adidas1]
+
+      plotData()
+
+      Backendless.Data.of( "data" ).save( { adidas:data1, nike:data2, vans:data3} )
  .then( function( savedObject ) {
   })
  .catch( function( error ) {
   });
   }else if(currentSelection=="Adidas") {
-  adidas = adidas + 1
-   myData = [vans, nike, adidas]
-   myNumber = [vans,nike,adidas]
-   plotData()
-    Backendless.Data.of( "data" ).save( { adidas:adidas, nike:nike, vans:vans} )
+  
+      adidas1 = adidas1 + 1
+  data1 = adidas1;
+data2 = nike1;
+data3 = vans1;
+      myData = [vans1, nike1, adidas1]
+
+      myNumber = [vans1,nike1,adidas1]
+
+      plotData()
+
+      Backendless.Data.of( "data" ).save( { adidas:data1, nike:data2, vans:data3} )
  .then( function( savedObject ) {
   })
  .catch( function( error ) {
@@ -45,9 +83,9 @@ var currentSelection = document.querySelector("input[name='selector']:checked").
 }
 
 var myColor = ["#39ca74","#e54d42","#f0c330","#3999d8","#35485d"];
-var myData = [vans,nike,adidas];
+var myData = [vans1,nike1,adidas1];
 var myLabel = ["Vans","Nike","Adidas"];
-var myNumber = [vans,nike,adidas];
+var myNumber = [vans1,nike1,adidas1];
 function getTotal(){
   var myTotal = 0;
   for (var j = 0; j < myData.length; j++) {
