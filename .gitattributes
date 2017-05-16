@@ -1,3 +1,10 @@
+
+git init
+git add .
+git commit -m "initial commit"
+git remote add websites https://finalproject.scm.gear.host/finalproject.git
+git push websites master
+
 # Auto detect text files and perform LF normalization
 * text=auto
 
@@ -15,9 +22,3 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-
-git init
-git add .
-git commit -m "initial commit"
-git remote add websites https://finalproject.scm.gear.host/finalproject.git
-git push websites master
